@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let balance = 100;
+
+    document.write("START", "<br>");
+    const productPrice1 = window.prompt("Product number 1 cost?");
+    const productPrice2 = window.prompt("Product number 2 cost?");
+    const productPrice3 = window.prompt("Product number 3 cost?");
+
+    // Строка в число
+    // const productPriceSum=parseInt(productPrice1)+parseInt(productPrice2)+parseInt(productPrice3);
+    // const productPriceSum=+productPrice1
+    // const productPriceSum=Number(productPrice1);
+    if (isNaN(productPrice1) || isNaN(productPrice2) || isNaN(productPrice3)) {
+      document.write("You have mistake in the product cost!");
+    } else {
+      if (balance >= Number(productPrice1) + Number(productPrice2) + Number(productPrice3)) {
+        document.write("Product purchased");
+      } else {
+        document.write("Dont have money");
+      }
+    }
+
+
+    document.write("<br>", "Lost of money: ", balance - (Number(productPrice1) + Number(productPrice2) + Number(productPrice3)));
+  </script>
+</body>
+
+</html>

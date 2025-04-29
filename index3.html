@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function showHelloMessage() {
+      alert("Hello, this is translate-game");
+    }
+
+    function getPercentage(_result, _words) {
+      return (_result.correctAnswersCount / _words.length * 100);
+    }
+
+    function startGame(_words, _result) {
+      for (let i = 0; i < _words.length; i++) {
+        let userAnswer = prompt(_words[i].original);
+        if (userAnswer === _words[i].translate) {
+          document.write("True", "<br>");
+          _result.correctAnswersCount = _result.correctAnswersCount + 1;
+        } else {
+          document.write("False", "<br>");
+        }
+      }
+    }
+
+    function showResult(_result, _words, _settings, _resultMessages) {
+      const mathCalculation = getPercentage(result, words);
+      if (mathCalculation > settings.minCorrectAnswers) {
+        document.write("<h4>result is: " + resultMessages.good + "</h4>");
+      } else {
+        document.write("<h4>result is: " + resultMessages.bad + "</h4>");
+      }
+    }
+
+    const words = [
+      {
+        original: "Hello",
+        translate: "Привет"
+      },
+      {
+        original: "How are you?",
+        translate: "Как дела?"
+      },
+      {
+        original: "Good buy",
+        translate: "Пока"
+      }
+    ]
+
+    const resultMessages = {
+      good: "Good job!",
+      bad: "U can better. Try again"
+    }
+
+    const settings = {
+      minCorrectAnswers: 50
+    }
+
+    const result = {
+      correctAnswersCount: 0
+    }
+
+    showHelloMessage();
+    startGame(words, result);
+    showResult(result, words, settings, resultMessages);
+
+  </script>
+</body>
+
+</html>

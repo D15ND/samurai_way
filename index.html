@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // dateinfo
+    const arcticle1Title="Expert warn";
+    const arcticle1ImageUrl="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHQE8UQwtbNJuUurssyvbQLFvYHQ9bSfhI2zZfPoO0QemnRsbOKLwNYcZS8maKMNBHDdNQFQkhsi4Z1y9EVqgyIPw0tx8TViKbHbqapHkuHz3CJZXZT4Zu-gUa77NV1-qvmU0Fphdg_CFk4EpZHOCuuahw2HOHDPyteNHERWs5PVvG1_ugJWYwkrIyTLo1/w500/hackers.jpg";
+    const arcticle1PublicationDate="Nov 7, 2023";
+    const arcticle1PartnershipUrl=null;
+    const arcticle1PartnershipTitle=null;
+    const isArcticle1PartnershipPublication=false;
+    const arcticle1Catigory1Title="Cyber Threat";
+    const arcticle1Catigory2Title="Malware";
+    const arcticle1Description="Multiple ransomware"
+
+    const arcticle2Title="Kimsuky Exploits BlueKeep RDP Vulnerability to Breach Systems in South Korea and Japan";
+    const arcticle2ImageUrl="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhST6zJgYKkzfVdjKqKIAjt8N5NaOcFppyzSrg5Gydfgoqj6muAskWa9WtcojroXzQxNYUvJnC5ISaxWkqObBKqE-myhy3oAJY4Vk09I4IwF-5rSmjOS7r44GjZo_JcKrKlKd1cSEi90XDninPpIkZH8aMFVmbUrJCJ6FMAAPpSygXFapWwN_IJlATtWsND/s728-e100/ai.png";
+    const arcticle2PublicationDate=null;
+    const arcticle2PartnershipUrl="http://thn.news/";
+    const arcticle2PartnershipTitle="wing.security";
+    const isArcticle2PartnershipPublication=true;
+    const arcticle2Catigory1Title="Malware / Vulnerability";
+    const arcticle2Catigory2Title="Malware";
+    const arcticle2Description="Cybersecurity researchers have flagged a new malicious campaign related to the North Korean state-sponsored threat actor known as Kimsuky  that exploits a now-patched vulnerability impacting Microsoft Remote Desktop Services to gain initial access.  The activity has been named Larva-24005  by the AhnLab Security Intelligence Center (ASEC).  In some systems, initial access was gained through exploiting the RDP vulnerability (BlueKeep, CVE-2019-0708), the South Korean cybersecurity company said . While an RDP vulnerability scanner was found in the compromised system, there is no evidence of its actual use.   CVE-2019-0708  (CVSS score: 9.8) is a critical wormable bug  in Remote Desktop Services that could enable remote code execution, allowing unauthenticated attackers to install arbitrary programs, access data, and even create new accounts with full user rights.  However, in order for an adversary to exploit the flaw, they would need to send a specially crafted...";
+
+    // UI program
+    document.write("<h2>", arcticle1Title ,"/<h2>");
+    document.write('<img src="', arcticle1ImageUrl, '"/>',);
+    document.write("<p>", arcticle1PublicationDate, "</p>");
+    document.write("<p>", arcticle1Catigory1Title, " / ", arcticle1Catigory2Title, "</p>");
+    document.write("<p>", arcticle1Description, "</p>");
+
+    document.write("<hr/>");
+
+    document.write("<h2>", arcticle2Title, "/<h2>");
+    document.write('<img src="', arcticle2ImageUrl, '"/>');
+    document.write("<br/>");
+    document.write('<p><a href="', arcticle2PartnershipUrl, '">', arcticle2PartnershipTitle, '</a></p>');
+    document.write("<p>", arcticle2Catigory1Title, " / ", arcticle2Catigory2Title);
+    document.write("<p>", arcticle2Description, "</p>");
+    document.write("<hr/>");
+  </script>
+</body>
+</html>
